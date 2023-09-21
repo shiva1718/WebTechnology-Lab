@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="page-title">Job Registration Form</h1>
+<form id="main-form" method="post">
+<!--  <div class="title-container">-->
+<!--    <div>Personal Details</div>-->
+<!--    <div>Education and Experience</div>-->
+<!--  </div>-->
+  <div id="personal-details-container" class="details-container">
+    <label for="name">Full Name</label>
+    <input name="name" type="text" id="name" />
+    <label for="dob">Data of Birth</label>
+    <input name="Data of Birth" type="date" id="dob">
+    <label>Gender:</label>
+    <span class="radio-options">
+      <input name="Gender" type="radio" id="male-radio" value="Male">
+      <label for="male-radio">Male</label>
+      <input name="Gender" type="radio" id="female-radio" value="Female">
+      <label for="female-radio">Female</label>
+    </span>
+    <label for="address">Address</label>
+    <input name="Address" type="text" id="address"/>
+    <label for="city">City</label>
+    <input name="City" type="text" id="city"/>
+    <label for="state">State</label>
+    <input name="State" type="text" id="state"/>
+    <label for="pincode">Pin code</label>
+    <input name="Pin code" type="number" id="pincode"/>
+    <label for="email">Email id</label>
+    <input name="Email id" type="email" id="email" />
+    <label for="phone">Mobile number</label>
+    <input name="Mobile no" type="tel" id="phone" />
+  </div>
+  <div id="edu-exp-details-container" class="details-container">
+    <label>Qualifications:</label>
+    <span class="radio-options">
+      <input name="Qualifications" type="radio" id="ug">
+      <label for="ug">UG</label>
+      <input name="Qualifications" type="radio" id="pg">
+      <label for="pg">PG</label>
+      <input name="Qualifications" type="radio" id="phd">
+      <label for="phd">PhD</label>
+    </span>
+    <label for="experience">Work Experience</label>
+    <input name="Work Experience" type="number" id="experience">
+    <label for="project-desc">Project Description</label>
+    <textarea name="Project Description" id="project-desc" cols="10" rows="3"></textarea><br>
+    <label for="expected-pa">Expected P.A</label>
+    <input name="Expected P.A" type="number" id="expected-pa">
+  </div>
+  <div id="submit-container">
+    <input type="submit" value="Submit">
+  </div>
+</form>
+
+</body>
+</html>

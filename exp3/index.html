@@ -1,0 +1,427 @@
+
+<html>
+<head>
+  <title>Untitled Document</title>
+  <style type="text/css">
+      #Layer1 {
+          position:absolute;
+          width:1047px;
+          height:792px;
+          z-index:1;
+          left: 103px;
+          top: 80px;
+      }
+      .style1 {
+          color: #000099;
+          font-weight: bold;
+          background-color:#00CCFF;
+      }
+      .style2 {
+          color: #000099;
+          font-weight: bold;
+          background-color:#00CCFF;
+      }
+      #Layer2 {
+          position:absolute;
+          width:1040px;
+          height:49px;
+          z-index:2;
+          left: 59px;
+          top: 9px;
+      }
+      .style3 {
+          color: #006666;
+          font-weight: bold;
+          background-color:#E0D2F0;
+      }
+
+      body{
+          background-color:#DADADA;
+      }
+  </style>
+  <script type="text/javascript">
+      function validation()
+      {
+          if(document.validate.name.value=="")
+          {
+              alert("enter the full name")
+              document.validate.name.focus();
+              return false
+          }
+          if(!isNaN(document.validate.name.value))
+          {
+              alert("enter the valid name");
+              document.validate.name.focus();
+              document.validate.name.value="";
+              return false
+          }
+          if(document.validate.day.value=="0")
+          {
+              alert("enter the day")
+              document.validate.day.focus();
+              return false
+          }
+          if(document.validate.month.value=="0")
+          {
+              alert("enter the month")
+              document.validate.month.focus();
+              return false
+          }
+          if(document.validate.year.value=="0")
+          {
+              alert("enter the year")
+              document.validate.year.focus();
+              return false
+          }
+          if(document.validate.gender.value=="0")
+          {
+              alert("enter the gender")
+              document.validate.gender.focus();
+              return false
+          }
+          if(document.validate.address.value=="")
+          {
+              alert("enter the address")
+              document.validate.address.focus();
+              return false
+          }
+          if(document.validate.city.value=="")
+          {
+              alert("enter the city")
+              document.validate.city.focus();
+              return false
+          }
+          if(!isNaN(document.validate.city.value))
+          {
+              alert("enter the valid City")
+              document.validate.city.focus();
+              document.validate.city.value="";
+              return false
+          }
+          if(document.validate.state.value=="")
+          {
+              alert("enter the state")
+              document.validate.state.focus();
+              return false
+          }
+          if(!isNaN(document.validate.state.value))
+          {
+              alert("enter the valid state")
+              document.validate.state.focus();
+              document.validate.state.value="";
+              return false
+          }
+          if(document.validate.pincode.value=="")
+          {
+              alert("enter the pincode ")
+              document.validate.pincode.focus();
+              return false
+          }
+          if( isNaN(document.validate.pincode.value))
+          {
+              alert("enter a valid pincode")
+              document.validate.pincode.focus();
+              return false
+          }
+          if(document.validate.pincode.value.length!=6)
+          {
+              alert("please enter the valid pincode")
+              document.validate.pincode.focus();
+              return false
+          }
+          if(document.validate.address.value=="")
+          {
+              alert("enter the address")
+              document.validate.address.focus();
+              return false
+          }
+          if(document.validate.email.value=="")
+          {
+              alert("enter the email id")
+              document.validate.email.focus();
+              return false
+          }
+          if(!(document.validate.email.value==""))
+          {
+              var x=document.validate.email.value
+              var atpos=x.indexOf("@");
+              var dotpos=x.lastIndexOf(".");
+              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+              {
+                  alert("Not a valid e-mail address");
+                  document.validate.email.focus();
+                  return false;
+              }
+          }
+          if(document.validate.mobile.value=="")
+          {
+              alert("enter the mobile no")
+              document.validate.mobile.focus();
+              return false
+          }
+          if( isNaN(document.validate.mobile.value))
+          {
+              alert("enter a valid mobile no")
+              document.validate.mobile.focus();
+              document.validate.mobile.value="";
+              return false
+          }
+          if(document.validate.mobile.value.length !=10)
+          {
+              alert("enter the valid mobile no")
+              document.validate.mobile.focus();
+              document.validate.mobile.select();
+              return false
+          }
+          if(document.validate.qualification.value=="0")
+          {
+              alert("enter the qualification")
+              document.validate.qualification.focus();
+              return false
+          }
+          if(document.validate.experience.value=="0")
+          {
+              alert("enter the experience")
+              document.validate.experience.focus();
+              return false
+          }
+          if(document.validate.project.value=="")
+          {
+              alert("enter the project description")
+              document.validate.project.focus();
+              return false
+          }
+          if(document.validate.salary.value=="")
+          {
+              alert("enter the salary ")
+              document.validate.salary.focus();
+              return false
+          }
+          if( isNaN(document.validate.salary.value))
+          {
+              alert("enter a valid salary")
+              document.validate.salary.focus();
+              document.validate.salary.value="";
+              return false
+          }
+      }
+
+
+  </script>
+</head>
+
+<body>
+<div id="Layer1">
+  <form id="validate" name="validate" method="post" action="">
+    <p>&nbsp;</p>
+    <table width="886" border="0" cellspacing="2" cellpadding="2">
+
+      <tr>
+        <td colspan="2"><div align="center" class="style1">Personal Details </div></td>
+        <td width="30" rowspan="10">&nbsp;</td>
+        <td colspan="2"> <div align="center" class="style2">Education and Experience </div></td>
+      </tr>
+      <tr>
+        <td width="111">Full Name</td>
+        <td width="255"><label>
+          <input name="name" type="text" id="name" />
+        </label></td>
+        <td width="152">Qualification</td>
+        <td width="217"><select name="qualification">
+          <option value="0">Select</option>
+          <option value="1">UG</option>
+          <option value="2">PG</option>
+
+          <option value="3">PHD</option>
+
+        </select></td>
+      </tr>
+      <tr>
+        <td>Date of Birth </td>
+        <td><select name="day">
+          <option value="0">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+
+          <select name="month">
+            <option value="0">Month</option>
+            <option value="1">Janauray</option>
+
+            <option value="2">Feburary</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+
+            <option value="8">August</option>
+            <option value="9">Sepetember</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+
+          <select name="year">
+            <option value="0">Year</option>
+            <option value="1">2009</option>
+            <option value="2">2008</option>
+            <option value="3">2007</option>
+            <option value="4">2006</option>
+
+            <option value="5">2005</option>
+            <option value="6">2004</option>
+            <option value="7">2003</option>
+            <option value="8">2002</option>
+            <option value="9">2001</option>
+            <option value="10">2000</option>
+
+            <option value="11">1999</option>
+            <option value="12">1998</option>
+            <option value="13">1997</option>
+            <option value="14">1996</option>
+            <option value="15">1997</option>
+            <option value="16">1996</option>
+
+            <option value="17">1995</option>
+            <option value="18">1994</option>
+            <option value="19">1993</option>
+            <option value="20">1992</option>
+            <option value="21">1991</option>
+            <option value="22">1990</option>
+
+            <option value="23">1989</option>
+            <option value="24">1988</option>
+            <option value="25">1987</option>
+            <option value="26">1986</option>
+            <option value="27">1985</option>
+            <option value="28">1984</option>
+
+            <option value="29">1983</option>
+            <option value="30">1982</option>
+            <option value="31">1981</option>
+            <option value="32">1980</option>
+          </select></td>
+        <td>Work Experience </td>
+        <td><select name="experience">
+          <option value="0">Select</option>
+          <option value="1">Fresher</option>
+          <option value="2">1 yr</option>
+          <option value="3">2 yrs</option>
+          <option value="4">3 yrs</option>
+          <option value="5">4 yrs</option>
+          <option value="6">5 yrs</option>
+          <option value="7">>5 yrs</option>
+
+        </select></td>
+      </tr>
+      <tr>
+        <td height="70">Sex</td>
+        <td><select name="gender" id="gender" >
+          <option value="0">Select Gender</option>
+          <option value="1">Male</option>
+
+          <option value="2">Female</option>
+        </select></td>
+        <td>Project Description </td>
+        <td><label>
+          <textarea name="project" id="project"></textarea>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><label>
+          <textarea name="address" id="address"></textarea>
+        </label></td>
+        <td>Expected Salary P.A </td>
+        <td><label>
+          <input name="salary" type="text" id="salary" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><label>
+          <input name="city" type="text" id="city" />
+        </label></td>
+        <td colspan="2" rowspan="5">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td><label>
+          <input name="state" type="text" id="state" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>PinCode</td>
+        <td><label>
+          <input name="pincode" type="text" id="pincode" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>Email ID</td>
+        <td><label>
+          <input name="email" type="text" id="email" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>Mobile Number</td>
+        <td><label>
+          <input name="mobile" type="text" id="mobile" />
+        </label></td>
+      </tr>
+      <tr>
+        <td colspan="5"><label>
+          <div align="center">
+            <input type="submit" name="Submit" value="Submit" onclick="return validation()"  />
+            <label>
+              <input type="reset" name="Submit2" value="Reset" />
+            </label>
+          </div>
+        </label></td>
+      </tr>
+    </table>
+
+  </form>
+</div>
+<div id="Layer2">
+  <div align="center">
+    <h1 class="style3">Job Registration Form </h1>
+  </div>
+</div>
+</body>
+</html>
