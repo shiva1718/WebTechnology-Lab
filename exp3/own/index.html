@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  <link rel="stylesheet" type="text/css" href="styles.css">-->
+  <title>Registration Form (Exp3)</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+
+      #registrationForm {
+          width: 300px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+
+      #registrationForm label {
+          display: block;
+          margin-bottom: 5px;
+      }
+
+      #registrationForm input[type="text"],
+      #registrationForm input[type="email"],
+      #registrationForm input[type="password"],
+      #registrationForm input[type="number"],
+      #registrationForm input[type="date"],
+      select {
+          width: 90%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+      }
+
+      #registrationForm input[type="submit"] {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          border: none;
+          background-color: #4CAF50;
+          color: white;
+      }
+
+      #registrationForm input[type="submit"]:hover {
+          background-color: #45a049;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+<form id="registrationForm">
+  <label for="name">Full Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="date-of-birth">Date of Birth</label>
+  <input type="date" id="date-of-birth" name="date_of_birth" required>
+
+  <label for="gender">Gender</label>
+  <select id="gender">
+    <option id='male-option' value="male">Male</option>
+    <option id='female-option' value="female">Female</option>
+  </select>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="pincode">Pincode</label>
+  <input type="number" id="pincode" name="pincode" required>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="confirm-password">Confirm Password</label>
+  <input type="password" id="confirm-password" name="confirm_password" required>
+
+  <input type="submit" value="Register">
+</form>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        let pinCode = document.getElementById("pincode").value;
+        if (pinCode.length !== 6) {
+            alert("Pincode must be 6 digits long!");
+            return;
+        }
+        let pass = document.getElementById("password").value;
+        let confirmPass = document.getElementById("confirm-password").value;
+        if (pass !== confirmPass) {
+            alert("Passwords do not match!");
+            return;
+        }
+        if (pass.length < 8) {
+            alert("Password must be at least 8 characters long!");
+            return;
+        }
+        alert("Form submitted!");
+        console.log("Form submitted!");
+    });
+</script>
+</body>
+</html>
