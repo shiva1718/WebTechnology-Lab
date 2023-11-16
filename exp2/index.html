@@ -36,13 +36,11 @@
         cursor: pointer;
     }
     #section1 button:hover {
-
         background-color: #fff;
-        color: #333;
+        color: #111111;
+        border: 2px solid #111111;
     }
     #section2 {
-        /*display: flex;*/
-        /*flex-direction: row;*/
         justify-content: space-around;
         width: 40%;
         padding: 20px;
@@ -66,7 +64,6 @@
         width: 25%;
     }
     #section3 div {
-      /*width: 25%;*/
       padding: 20px;
       border: 1px solid #333;
       border-radius: 5px;
@@ -77,15 +74,7 @@
     #section3 div p {
       text-align: justify;
     }
-    #what {
-        background-color: #fff;
-        color: #333;
-    }
-    #where {
-      background-color: #fff;
-      color: #333;
-    }
-    #how {
+    #what, #where, #how {
         background-color: #fff;
         color: #333;
     }
@@ -105,10 +94,9 @@
         width: 65%;
       }
       #section3 {
-          width: 100%;
+          width: 90%;
       }
     }
-
   </style>
 </head>
 <body>
@@ -117,10 +105,10 @@
 </header>
 <div id="main-container">
   <div id="section1">
-    <button>The Flight</button>
-    <button>The City</button>
-    <button>The History</button>
-    <button>The Food</button>
+    <button onclick="reveal(0)">The Flight</button>
+    <button onclick="reveal(1)">The City</button>
+    <button onclick="reveal(2)">The History</button>
+    <button onclick="reveal(3)">The Food</button>
   </div>
   <div id="section2">
     <div id="the-flight">
@@ -159,7 +147,15 @@
   document.getElementById('the-flight').style.display = 'none';
   document.getElementById('the-food').style.display = 'none';
   document.getElementById('the-history').style.display = 'none';
-
+  function reveal(id) {
+      for (let i = 0; i < 4; i++) {
+          if (i === id) {
+              document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'block';
+          } else {
+              document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'none';
+          }
+      }
+  }
 </script>
 </body>
 </html>
