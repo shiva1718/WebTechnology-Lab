@@ -3,6 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <title>Reactive Website</title>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    #main-container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        padding: 20px;
+        border: 2px solid #333;
+        width: 20%;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #section1 button {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #section1 button:hover {
+
+        background-color: #fff;
+        color: #333;
+    }
+    #section2 {
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        justify-content: space-around;
+        width: 40%;
+        padding: 20px;
+    }
+    #section2 div {
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 5px;
+    }
+    #section2 div h2 {
+      text-align: center;
+    }
+    #section2 div p {
+      text-align: justify;
+    }
+    #section3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        width: 25%;
+    }
+    #section3 div {
+      /*width: 25%;*/
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+    #section3 div h3 {
+      text-align: center;
+    }
+    #section3 div p {
+      text-align: justify;
+    }
+    #what {
+        background-color: #fff;
+        color: #333;
+    }
+    #where {
+      background-color: #fff;
+      color: #333;
+    }
+    #how {
+        background-color: #fff;
+        color: #333;
+    }
+    #header-title {
+      margin: 0;
+    }
+
+    /*media queries*/
+    @media screen and (max-width: 1000px) {
+      #main-container {
+        flex-direction: row;
+      }
+      #section1 {
+        width: 20%;
+      }
+      #section2 {
+        width: 65%;
+      }
+      #section3 {
+          width: 100%;
+      }
+    }
+
+  </style>
 </head>
 <body>
 <header>
@@ -48,5 +155,11 @@
     </div>
   </div>
 </div>
+<script>
+  document.getElementById('the-flight').style.display = 'none';
+  document.getElementById('the-food').style.display = 'none';
+  document.getElementById('the-history').style.display = 'none';
+
+</script>
 </body>
 </html>
