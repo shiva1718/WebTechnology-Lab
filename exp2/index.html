@@ -50,10 +50,10 @@
         border: 1px solid #333;
         border-radius: 5px;
     }
-    #section2 div h2 {
+    #section2 div h2, #section3 div h3 {
       text-align: center;
     }
-    #section2 div p {
+    #section2 div p, #section3 div p {
       text-align: justify;
     }
     #section3 {
@@ -68,12 +68,7 @@
       border: 1px solid #333;
       border-radius: 5px;
     }
-    #section3 div h3 {
-      text-align: center;
-    }
-    #section3 div p {
-      text-align: justify;
-    }
+
     #what, #where, #how {
         background-color: #fff;
         color: #333;
@@ -111,21 +106,9 @@
     <button onclick="reveal(3)">The Food</button>
   </div>
   <div id="section2">
-    <div id="the-flight">
-      <h2>The Flight</h2>
-      <p>Major domestic carriers operate direct flights to Chennai and from the city, while all major international carriers fly from and to the city too.</p>
-    </div>
     <div id="the-city">
       <h2>The City</h2>
       <p>Chennai formerly known as Madras, is the capital city of Tamil Nadu, the southernmost state of India. It is the state's primate city both in area and population and is located on the Coromandel Coast of the Bay of Bengal.</p>
-    </div>
-    <div id="the-history">
-      <h2>The History</h2>
-      <p>The Pallavas of Kanchi built the areas of Mahabalipuram and Pallavaram during the reign of Mahendravarman I. They also defeated several kingdoms including the Cheras, Cholas and Pandyas who ruled over the area before their arrival.</p>
-    </div>
-    <div id="the-food">
-      <h2>The Food</h2>
-      <p>Chennai, India has a vibrant street food culture and is known for its rich and diverse culture. The food culture of Chennai is mainly South Indian and includes dishes like Dosas, Idlis, vada, etc.</p>
     </div>
   </div>
   <div id="section3">
@@ -143,19 +126,5 @@
     </div>
   </div>
 </div>
-<script>
-  document.getElementById('the-flight').style.display = 'none';
-  document.getElementById('the-food').style.display = 'none';
-  document.getElementById('the-history').style.display = 'none';
-  function reveal(id) {
-      for (let i = 0; i < 4; i++) {
-          if (i === id) {
-              document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'block';
-          } else {
-              document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'none';
-          }
-      }
-  }
-</script>
 </body>
 </html>
