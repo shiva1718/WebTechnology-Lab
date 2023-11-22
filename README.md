@@ -6,8 +6,6 @@
 
 [Exp2 custom](https://shiva1718.github.io/WebTechnology-Lab/exp2/index.html)
 
-[Exp3 custom1](https://shiva1718.github.io/WebTechnology-Lab/exp3/custom1/index.html)
-
 [Exp3 custom2](https://shiva1718.github.io/WebTechnology-Lab/exp3/custom2/index.html)
 
 [Exp3 lab manual](https://shiva1718.github.io/WebTechnology-Lab/exp3/lab-manual/index.html)
