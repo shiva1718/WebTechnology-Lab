@@ -4,7 +4,7 @@
 
 [Exp1 lab manual](https://shiva1718.github.io/WebTechnology-Lab/exp1/lab-manual/mapping.html)
 
-[Exp2 custom](https://shiva1718.github.io/WebTechnology-Lab/exp2/index.html) - Intentionally made it non-interactive by reducing lines of code to make it easy during the exams
+[Exp2 custom](https://shiva1718.github.io/WebTechnology-Lab/exp2/index.html) - Intentionally made it non-interactive by reducing lines of code.
 
 [Exp3 custom2](https://shiva1718.github.io/WebTechnology-Lab/exp3/custom2/index.html)
 
