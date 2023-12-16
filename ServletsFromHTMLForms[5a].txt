@@ -1,0 +1,81 @@
+web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>PostParam</servlet-name>
+        <servlet-class>PostParam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostParam</servlet-name>
+        <url-pattern>/PostParam</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+
+
+------------------------------------------------------------------------------------------------------------
+index.html
+<html>
+    <head>
+        <title>
+            INVOKING SERVLET FROM HTML
+        </title>
+    </head>
+    <body>
+    <center>
+        <form name="PostParam" method="Post" action="PostParam">
+            <table>
+                <tr>
+                    <td>
+                        <B>Employee</B>
+                    </td>
+                    <td>
+                        <input type="text" name="ename" size="25" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <B>Phone</B>
+                    </td>
+                    <td>
+                        <input type="text" name="phoneno" size="25" value="">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+    </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------
+PostParam.java
+import java.io.*;
+import java.util.*;
+import javax.servlet.*;
+public class PostParam extends GenericServlet
+{
+ public void service(ServletRequest req,ServletResponse res)throws ServletException,IOException
+ {
+  PrintWriter pw=res.getWriter();
+  pw.print("Registration Successful...");
+  Enumeration e=req.getParameterNames();
+  boolean flag = true;
+  while(e.hasMoreElements())
+  {
+   String str1=(String)e.nextElement();
+   String str2=req.getParameter(str1);
+   pw.print(str1+"="+str2);
+   if (flag) {
+       pw.print(" and ");
+       flag = false;
+   }
+  }
+  pw.close();
+ }
+}

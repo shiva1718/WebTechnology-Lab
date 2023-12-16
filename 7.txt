@@ -1,0 +1,60 @@
+Student.xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="Style.xsl"?>
+<student>
+<details>
+<name>Kavitha </name>
+<branch>IT</branch>
+<dob>1985</dob>
+<mark>200</mark>
+<grade>A</grade>
+</details>
+<details>
+<name>Sri</name>
+<branch>ECE</branch>
+<dob>2000</dob>
+<mark>120</mark>
+<grade>C</grade>
+45
+</details>
+<details>
+<name>Kavya</name>
+<branch>EEE</branch>
+<dob>1985</dob>
+<mark>200</mark>
+<grade>S</grade>
+</details>
+</student>
+
+
+------------------------------------------------------------------------------------------------------------
+
+Style.xsl
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body>
+<h2>Student Information System</h2>
+<table border="1">
+<tr bgcolor="#9acd32">
+<th>Name</th>
+<th>Branch</th>
+<th>DOB</th>
+<th>Mark</th>
+<th>Grade</th>
+</tr>
+46
+<xsl:for-each select="student/details">
+<tr>
+<td><xsl:value-of select="name"/></td>
+<td><xsl:value-of select="branch"/></td>
+<td><xsl:value-of select="dob"/></td>
+<td><xsl:value-of select="mark"/></td>
+<td><xsl:value-of select="grade"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
