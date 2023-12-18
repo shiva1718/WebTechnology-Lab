@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Website</title>
+  <style>
+      body {
+          display: flex;
+          flex-direction: column;
+      }
+      #main-container {
+          display: flex;
+          flex-flow: row wrap;
+      }
+      #section1 {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          padding: 20px;
+          border: 2px solid #333;
+          width: 20%;
+      }
+      header {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+      }
+
+      #section1 button {
+          background-color: #333;
+          color: #fff;
+          border: 1px solid #fff;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      #section1 button:hover {
+          background-color: #fff;
+          color: #111111;
+          border: 2px solid #111111;
+      }
+      #section2 {
+          justify-content: space-around;
+          width: 40%;
+          padding: 20px;
+      }
+      #section2 div {
+          padding: 20px;
+          border: 1px solid #333;
+          border-radius: 5px;
+      }
+      #section2 div h2 {
+          text-align: center;
+      }
+      #section2 div p {
+          text-align: justify;
+      }
+      #section3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 20px;
+          width: 25%;
+      }
+      #section3 div {
+          padding: 20px;
+          border: 1px solid #333;
+          border-radius: 5px;
+      }
+      #section3 div h3 {
+          text-align: center;
+      }
+      #section3 div p {
+          text-align: justify;
+      }
+      #what, #where, #how {
+          background-color: #fff;
+          color: #333;
+      }
+      #header-title {
+          margin: 0;
+      }
+
+      /*media queries*/
+      @media screen and (max-width: 1000px) {
+          #main-container {
+              flex-direction: row;
+          }
+          #section1 {
+              width: 20%;
+          }
+          #section2 {
+              width: 65%;
+          }
+          #section3 {
+              width: 90%;
+          }
+      }
+  </style>
+</head>
+<body>
+<header>
+  <h1 id="header-title">Chennai</h1>
+</header>
+<div id="main-container">
+  <div id="section1">
+    <button onclick="reveal(0)">The Flight</button>
+    <button onclick="reveal(1)">The City</button>
+    <button onclick="reveal(2)">The History</button>
+    <button onclick="reveal(3)">The Food</button>
+  </div>
+  <div id="section2">
+    <div id="the-flight">
+      <h2>The Flight</h2>
+      <p>Major domestic carriers operate direct flights to Chennai and from the city, while all major international carriers fly from and to the city too.</p>
+    </div>
+    <div id="the-city">
+      <h2>The City</h2>
+      <p>Chennai formerly known as Madras, is the capital city of Tamil Nadu, the southernmost state of India. It is the state's primate city both in area and population and is located on the Coromandel Coast of the Bay of Bengal.</p>
+    </div>
+    <div id="the-history">
+      <h2>The History</h2>
+      <p>The Pallavas of Kanchi built the areas of Mahabalipuram and Pallavaram during the reign of Mahendravarman I. They also defeated several kingdoms including the Cheras, Cholas and Pandyas who ruled over the area before their arrival.</p>
+    </div>
+    <div id="the-food">
+      <h2>The Food</h2>
+      <p>Chennai, India has a vibrant street food culture and is known for its rich and diverse culture. The food culture of Chennai is mainly South Indian and includes dishes like Dosas, Idlis, vada, etc.</p>
+    </div>
+  </div>
+  <div id="section3">
+    <div id="what">
+      <h3>What?</h3>
+      <p>Chennai is the political and cultural hub of the state of Tamil Nadu</p>
+    </div>
+    <div id="where">
+      <h3>Where?</h3>
+      <p>It is located in southern part of India</p>
+    </div>
+    <div id="how">
+      <h3>How?</h3>
+      <p></p>
+    </div>
+  </div>
+</div>
+<script>
+    document.getElementById('the-flight').style.display = 'none';
+    document.getElementById('the-food').style.display = 'none';
+    document.getElementById('the-history').style.display = 'none';
+    function reveal(id) {
+        for (let i = 0; i < 4; i++) {
+            if (i === id) {
+                document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'block';
+            } else {
+                document.getElementById("section2").getElementsByTagName('div')[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+</body>
+</html>
