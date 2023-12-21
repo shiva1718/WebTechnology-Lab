@@ -1,0 +1,103 @@
+login.component.html
+
+
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input ng-Input type="text" id="username" name="username" [(ngModel)]="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+
+----------------------------------------------------------------------------
+login.component.ts
+
+
+
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+@Component({
+ selector: 'app-login',
+ templateUrl: './login.component.html',
+ styleUrls: ['./login.component.css'],
+ imports: [FormsModule],
+ standalone: true
+})
+export class LoginComponent {
+ username: string = '';
+ password: string = '';
+ loggedIn: boolean = false;
+ login() {
+ console.log(`Username: ${this.username}, Password: ${this.password}`);
+ this.loggedIn = true;
+ this.username = '';
+ this.password = '';
+ }
+}
+
+-------------------------------------------------------------------------------
+
+app.component.html
+
+
+
+<div style="text-align:center">
+  <app-login></app-login>
+ </div>
+
+-------------------------------------------------------------------------------
+app.component.ts
+
+
+
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, LoginComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'sample';
+}
+
+
+
+
+-------------------------------------------------------------------------------
+app.module.ts
+
+
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Add this line
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+@NgModule({
+ declarations: [
+ AppComponent,
+ LoginComponent,
+ ],
+ imports: [
+ BrowserModule,
+ FormsModule,
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule { }
