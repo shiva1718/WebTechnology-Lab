@@ -1,35 +1,35 @@
 
 WTLab8A.java
 
-import java.io.*; 
+import java.io.*;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
-import org.xml.sax.*;
 import java.util.Scanner;
 
 public class WTLab8A {
-public static void main(String[] args) {
-try {
-System.out.println("Enter the name of the Xml document:");
-Scanner s = new Scanner(System.in);
-String fileName =
-s.nextLine(); File fp = new
-File(fileName); if (fp.exists())
-{
-DocumentBuilderFactory factObj = DocumentBuilderFactory.newInstance();
-DocumentBuilder builder = factObj.newDocumentBuilder();
-Document doc = builder.parse(fileName);
-NodeList tempList = doc.getElementsByTagName("*");
-System.out.println("\nthe foll are the elements in the xml file" + fileName);
-for (int i = 0; i < tempList.getLength(); i++) {
-Element e = (Element) tempList.item(i);
-System.out.println(e);
+
+    public static void main(String[] args) {
+        try {
+            System.out.println("Enter the name of the Xml document:");
+            Scanner s = new Scanner(System.in);
+            String fileName= s.nextLine();
+            File fp = new File(fileName);
+            if (fp.exists()) {
+                DocumentBuilderFactory factObj = DocumentBuilderFactory.newInstance();
+                DocumentBuilder builder = factObj.newDocumentBuilder();
+                Document doc = builder.parse(fileName);
+                NodeList tempList = doc.getElementsByTagName("*");
+                System.out.println("\nthe foll are the elements in the xml file" + fileName);
+                for (int i = 0; i < tempList.getLength(); i++) {
+                    Element e = (Element) tempList.item(i);
+                    System.out.println(e);
+                }
+            } else {
+                System.out.println("File doesnot exist");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }
-} else {
-System.out.println("File doesnot exist");
-}
-} catch (Exception e) {
-System.out.println(e);
-}
-}
-}
+
