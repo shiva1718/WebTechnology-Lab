@@ -1,6 +1,5 @@
 Result.jsp
 <html>
-
 <%
 String[] userans=new String[5];
 String[] correctans={ "True","False","True", "True", "True"};
@@ -38,28 +37,37 @@ try {
 
 index.html
 <html>
-<form action="Result.jsp" method="get">
-<h1>
-<center> ONLINE EXAMINATION </center>
-<h1> Register no</h1>
-<input type="text" name="frmregno"> <br/> <br/>
-<b>
-1. XML is Extensible Markup Language</b><br/>
-<input type="radio" name="group1" value="True">True <input type="radio" name="group1"
-value="False">False<br><b>
-2.Java Servlets is Client Side Scripting</b><br/>
-<input type="radio" name="group2" value="True">True <input type="radio" name="group2"
-value="False">False<br> <b>
-3. CSS is used in style specifications</b><br/>
-<input type="radio" name="group3"
-value="True">True <input type="radio" name="group3" value="False">False<br><b>
-4.Xml Dtd is Document Type Defenition</b><br/>
-<input type="radio" name="group4" value="True">True <input type="radio" name="group4"
-value="False">False<br><b>
-5. HTML is Mark UP LANGUAGE</b><br/>
-<input type="radio" name="group5" value="True">True
-<input type="radio" name="group5" >False
-<input type="submit" value="Submit">
+    <form action="Result.jsp" method="get">
+        <center>
+        <h1>
+            ONLINE EXAMINATION
+        </h1>
+        </center>
+        <h3> Register no</h3>
+        <input type="text" name="frmregno"> <br/> <br/>
+        
+        <b>1. XML is Extensible Markup Language</b><br/>
+        <input type="radio" name="group1" value="True">True 
+        <input type="radio" name="group1" value="False">False<br>
+        
+        <b>2.Java Servlets is Client Side Scripting</b><br/>
+        <input type="radio" name="group2" value="True">True 
+        <input type="radio" name="group2" value="False">False<br>
+        
+        <b>3. CSS is used in style specifications</b><br/>
+        <input type="radio" name="group3" value="True">True 
+        <input type="radio" name="group3" value="False">False<br>
+        
+        <b>4.Xml Dtd is Document Type Defenition</b><br/>
+        <input type="radio" name="group4" value="True">True
+        <input type="radio" name="group4" value="False">False<br>
+        
+        <b>5. HTML is Mark UP LANGUAGE</b><br/>
+        <input type="radio" name="group5" value="True">True
+        <input type="radio" name="group5" >False
+        
+        <input type="submit" value="Submit">
+    </form>
 </html>
 
 ------------------------------------------------------------------------------------------------------------
